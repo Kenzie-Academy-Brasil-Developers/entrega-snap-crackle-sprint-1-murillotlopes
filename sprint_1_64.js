@@ -1,6 +1,6 @@
-//console.log(snapCrackle(15))
+console.log(snapCrackle(15))
 
-console.log(snapCracklePrime(15))
+console.log(snapCracklePrime(100))
 
 
 
@@ -57,21 +57,19 @@ function snapCracklePrime(maxValue){
             }
 
         }else {
-                        
+            let ehPrimo = false            
             for(let j=0; j<=i; j++){
                 if (i === prime[j]){
                     theReturn = theReturn + word4
-                    
+                    ehPrimo = true
                 }
             }
 
             if ((i !== (i%2 !== 0 && i%5 === 0)) && i!== (i%2 !== 0 && i%5 !== 0) && i !== (i%5 === 0 && i%2 ===0)){
-                for (let j=0; j<=i; i++){
-                    if (i !== prime[j]){
-                        theReturn = theReturn + i
-                    }
+                if (ehPrimo === false){
+                    theReturn = theReturn + i
                 }
-                
+                                
             }
 
             if (i !== maxValue){
